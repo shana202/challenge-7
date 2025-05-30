@@ -1,0 +1,64 @@
+/* BlogPostItem.module.css */
+.blogPostItem {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 4px; /* Soft corners for a modern look */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for a subtle lift */
+  .blogPostItem:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .postTitle{
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+  }
+  
+  .postTitle h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Change title color on hover */
+  .postTitle:hover h2 {
+    color: #007BFF;
+  }
+  
+  /* Summary styling */
+  .summary {
+    font-size: 16px;
+    color: #666666;
+    margin: 12px 0;
+    line-height: 1.5;
+  }
+  
+  /* Date styling */
+  .date {
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+  }
+  
+  /* Mobile adjustments (up to 768px) */
+  @media (max-width: 768px) {
+    .blogPostItem {
+      padding: 15px;
+    }
+    .title h2 {
+      font-size: 20px;
+    }
+    .summary {
+      font-size: 14px;
+    }
+    .date {
+      font-size: 12px;
+    }
+  }
+  

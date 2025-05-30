@@ -1,0 +1,93 @@
+.blogPostDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(43, 42, 42, 0.05);
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  color: #8a7878;
+}
+
+/* Title */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Author */
+.author {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+/* Date */
+.date {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+
+/* Content */
+.content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Make links styled and accessible */
+.content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  color: #0056b3;
+}
+
+/* Responsive images */
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Not found message */
+.notFound {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #b00;
+}
+
+/* --------------------------------- */
+/* Mobile View (up to 768px)        */
+/* --------------------------------- */
+@media (max-width: 768px) {
+  .blogPostDetail {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .author {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}

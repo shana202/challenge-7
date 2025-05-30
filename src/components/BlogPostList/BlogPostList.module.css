@@ -1,0 +1,36 @@
+/* BlogPostList.module.css */
+.blogPostList {
+    display: grid;
+    gap: 20px;
+  }
+  
+  /* Desktop View (1200px and above): Three-column layout */
+  @media (min-width: 1200px) {
+    .blogPostList {
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+  }
+  
+  /* Tablet View (769px to 1199px): Two-column layout */
+  @media (min-width: 769px) and (max-width: 1199px) {
+    .blogPostList {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+  }
+  
+  /* Mobile View (up to 768px): Single-column layout with side padding */
+  @media (max-width: 768px) {
+    .blogPostList {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+  }
+  
+  /* No posts message styling */
+  .noPosts {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    color: black;
+  }

@@ -1,0 +1,36 @@
+/* src/components/CommentForm/CommentForm.module.css */
+.form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+textarea,
+input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fieldGroup input[type="url"] {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+}

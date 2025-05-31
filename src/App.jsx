@@ -16,6 +16,7 @@ import Layout from "./components/Layout/Layout";
 import CommentList from "./components/CommentList/CommentList";
 import CommentForm from "./components/CommentForm/CommentForm";
 
+
 const initialPosts = [
   {
     id: "1",
@@ -77,14 +78,16 @@ const stripHtml = (html) => {
   return tmp.textContent || tmp.innerText || "";
 };
 
-const PostsPage = ({ posts }) => {
+const PostsPage = ({ posts, searchTerm }) => {
   const navigate = useNavigate();
   return (
     <div>
       <BlogPostList
         posts={posts}
+        searchTerm={searchTerm}
         onSelect={(id) => navigate(`/posts/${id}`)}
       />
+      
     </div>
   );
 };
@@ -205,7 +208,12 @@ const EditPost = ({ posts, onUpdate }) => {
 const App = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [filteredPosts, setFilteredPosts] = useState(initialPosts);
+  // const [query, setQuery] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  
+
+
+  
 
   const handleCreatePost = (newPost) => {
     const newId = (posts.length + 1).toString();
@@ -231,8 +239,9 @@ const App = () => {
 
 
   return (
+    
     <Router>
-      <Layout>
+      <Layout query={searchTerm} onSearch={setSearchTerm}>
         <div>
           <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog Posts</h2>
           ;

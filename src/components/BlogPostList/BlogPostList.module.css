@@ -3,6 +3,17 @@
     display: grid;
     gap: 20px;
   }
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  .ariaStatus {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
   
   /* Desktop View (1200px and above): Three-column layout */
   @media (min-width: 1200px) {

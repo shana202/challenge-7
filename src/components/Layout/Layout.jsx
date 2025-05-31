@@ -2,11 +2,12 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import styles from "./Layout.module.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, query, onSearch }) => {
   return (
     <div className={styles.layout}>
       <header>
-        <NavBar />
+        <NavBar query={query} onSearch={onSearch}/> 
+        
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>

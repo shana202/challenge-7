@@ -22,7 +22,8 @@
 }
 
 .desktopLinks {
-  display: flex;
+  display: flex;  
+  text-align: right;
   gap: 20px;
 }
 

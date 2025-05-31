@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 
 function SearchBar({ query, onSearch}) {
-    
+    const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
     
     
         
@@ -10,6 +14,7 @@ function SearchBar({ query, onSearch}) {
     return (
         <div>
             <input
+                ref={inputRef}
                 type="text"
                 placeholder="Search..."
                 value={query}

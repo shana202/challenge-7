@@ -12,7 +12,7 @@ function SearchBar({ query, onSearch}) {
         
 
     return (
-        <div>
+        <div>           
             <input
                 ref={inputRef}
                 type="text"

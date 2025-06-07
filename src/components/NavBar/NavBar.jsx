@@ -4,7 +4,7 @@ import styles from "./NavBar.module.css";
 import SearchBar from "../SearchBar/SearchBar"; // Adjust the import path as necessary
 
 
-const NavBar = ({ query, onSearch}) => {
+const NavBar = ({ onSearch}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -28,7 +28,7 @@ const NavBar = ({ query, onSearch}) => {
         <Link to="/posts/new">New Post</Link>
       </div>
 
-      <SearchBar query={query} onSearch={onSearch}/>
+      <SearchBar onSearch={onSearch}/>
       
     
 

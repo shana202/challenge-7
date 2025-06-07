@@ -1,0 +1,108 @@
+searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .searchWrapper {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .searchInput {
+    padding: 8px 12px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .searchInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+  }
+  
+  .searchButton,
+  .cancelButton {
+    padding: 8px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cancelButton {
+    background-color: #dc3545;
+    border-radius: 4px;
+  }
+  
+  .searchButton:hover,
+  .cancelButton:hover {
+    opacity: 0.9;
+  }
+  
+  /* Screen reader only class */
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  /* Desktop styles (width > 768px) */
+  @media (min-width: 769px) {
+    .searchWrapper {
+      width: 250px; /* Fixed width for desktop */
+    }
+  
+    .searchInput {
+      width: 100%;
+    }
+  
+    .searchButton {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  
+  /* Mobile styles (width ≤ 768px) */
+  @media (max-width: 768px) {
+    .searchWrapper {
+      width: 40px; /* Just the icon initially */
+    }
+  
+    .searchInput {
+      display: none; /* Hidden until expanded */
+    }
+  
+    .mobileExpanded {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: white;
+      z-index: 1000;
+      padding: 10px;
+    }
+  
+    .mobileExpanded .searchInput {
+      display: block;
+      width: calc(100% - 60px); /* Adjust for cancel button */
+      border-radius: 4px 0 0 4px;
+    }
+  
+    .mobileExpanded .cancelButton {
+      margin-left: 5px;
+    }
+  }
+  
+  
